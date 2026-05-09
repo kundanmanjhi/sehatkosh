@@ -7,6 +7,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Patients from './pages/patients/Patients';
 import Doctors from './pages/doctors/Doctors';
 import Appointments from './pages/appointments/Appointments';
+import SymptomChat from './pages/chat/SymptomChat';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="patients" element={<Patients />} />
           <Route path="doctors" element={<Doctors />} />
           <Route path="appointments" element={<Appointments />} />
+          <Route path="chat" element={<SymptomChat />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
